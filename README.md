@@ -1,4 +1,4 @@
-#  AgriStream
+#  AgriStream_Realtime_Analytics_Pipeline
 
 **A real-time agricultural analytics pipeline:** Apache Kafka for ingestion, PyFlink for windowed aggregation, and PostgreSQL for operational analytics, all containerized with Docker.
 
