@@ -8,13 +8,8 @@
 
 AgriStream ingests a continuous stream of farm sensor readings (soil moisture, temperature, humidity, pH), computes **1-minute tumbling-window aggregates per field** using event time, and stores the results in PostgreSQL. Dashboards, APIs and alerting systems can then query it with plain SQL.
 
-```mermaid
-flowchart LR
-    A[Sensor Simulator<br/>Python] -->|JSON events| B[(Kafka<br/>agri.sensor.readings)]
-    B --> C[PyFlink Job<br/>1-min tumbling window<br/>event time + watermark]
-    C -->|JDBC upsert| D[(PostgreSQL<br/>field_metrics_1m)]
-    D --> E[Views: latest_field_status<br/>irrigation_alerts]
-```
+![ AgriStream_Realtime_Analytics_Pipeline](images/your-exported-diagram.svg)
+
 
 ### Why this design
 
