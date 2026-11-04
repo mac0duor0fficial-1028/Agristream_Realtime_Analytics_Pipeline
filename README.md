@@ -4,7 +4,7 @@
 
 ---
 
-## Overview
+## Architectural Overview
 
 AgriStream ingests a continuous stream of farm sensor readings (soil moisture, temperature, humidity, pH), computes **1-minute tumbling-window aggregates per field** using event time, and stores the results in PostgreSQL. Dashboards, APIs and alerting systems can then query it with plain SQL.
 
